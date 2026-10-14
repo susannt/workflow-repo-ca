@@ -13,7 +13,7 @@ export function saveUser(user) {
   saveToStorage(userKey, user);
 }
 
-export function getUsername() {
+export function getUserName() {
   const user = getFromStorage(userKey);
   return user?.data ? user?.data.name : null;
 }
