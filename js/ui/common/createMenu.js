@@ -1,10 +1,10 @@
-import { getUsername } from "../../utils/storage.js";
+import { getUserName } from "../../utils/storage.js";
 import { isActivePath } from "../../utils/userInterface.js";
 
 export function createMenu() {
   const container = document.querySelector("#menu-container");
   const currentPath = window.location.pathname;
-  const username = getUsername();
+  const username = getUserName();
 
   const createNavLink = (href, text) => {
     const isActive = isActivePath(href, currentPath) && text !== "Logo";
